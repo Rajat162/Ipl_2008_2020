@@ -126,7 +126,6 @@ group by bowling_team
 order by count
 desc;
 
-
 select bowling_team,count(*) from deliveries_v02
 where ball_result = 'dot'
 group by bowling_team 
@@ -134,7 +133,6 @@ order by count
 asc;
 
 /* TASK 15 */	 
-
 
 select*from deliveries;
 
@@ -163,7 +161,6 @@ left join (select max(venue) as venue, max(date) as match_date,
 		  from matches group by match_id)as b
 		  on a.match_id = b.match_id;
 		  
-
 /* TASK 18 */
 
 select* from deliveries_v03
@@ -172,7 +169,6 @@ select venue, sum(total_runs) as runs from deliveries_v03
 group by venue 
 order by runs
 desc;
-
 
 /* TASK 19 */
 
@@ -194,7 +190,6 @@ replace(team1,'Rising Pune Supergiants','Rising Pune Supergiants')
 as team1_correction,
 replace(team2,'Rising Pune Supergiants','Rising Pune Supergiants')
 from matches;
-
 
 /* TASK 21 */
 
