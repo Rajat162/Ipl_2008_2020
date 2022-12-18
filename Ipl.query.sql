@@ -205,7 +205,7 @@ select *from deliveries_v04
 
 select count(distinct ball_id) as count_ball_id from deliveries_v04
 
-/* TASK 24 */
+/* TASK 23 */
 
 create table deliveries_v05 as select*,
 row_number()
@@ -215,13 +215,13 @@ from deliveries_v04
 
 select * from deliveries_v05
 
-/* TASK 25 */
+/* TASK 24 */
 
 select count(*) from deliveries_v05
  
 select* from deliveries_v05 where r_num=2
 
-/* TASK 26 */
+/* TASK 25 */
 
 select* from deliveries_v05 
 where ball_id in (select ball_id from deliveries_v05 where r_num=2);
